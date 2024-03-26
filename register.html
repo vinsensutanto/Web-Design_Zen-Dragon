@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Zen dragoN</title>
+    <link rel="icon" href="assets/img/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/RegisterStyle.css" />
+  </head>
+
+  <body>
+    <div class="content-wrapper">
+      <canvas id="canvas"></canvas>
+      <form>
+        <h2>Be A Part of</h2>
+        <img src="assets/img/logowhite.png" alt="logo">
+        <div class="input-wrapper">
+          <input type="text" id="inputN" required />
+          <label for="inputN" class="placeholder">First Name</label>
+        </div>
+
+        <div class="input-wrapper">
+          <input type="text" id="inputL" required />
+          <label for="inputL" class="placeholder">Last Name</label>
+        </div>
+
+        <p>Gender</p>
+        <div class="radio-wrapper">
+          <input type="radio" name="select" id="male"   />
+          <input type="radio" name="select" id="female" />
+          <label for="male" class="option male">
+            <div class="dot"></div>
+            <span>Male</span>
+          </label>
+          <label for="female" class="option female">
+            <div class="dot"></div>
+            <span>Female</span>
+          </label>
+        </div>
+
+        <div class="textArea-wrapper">
+          <label for="address" class="textAreaLabel">Address</label>
+          <textarea
+            id="address"
+            placeholder="Ex. Green Lake City, Cluster Australia, East Coast 6, No 8"
+            required
+          ></textarea>
+        </div>
+
+        <div class="input-wrapper">
+          <input type="text" id="email" required />
+          <label for="email" class="placeholder">Email Address</label>
+        </div>
+
+        <button>Join</button>
+      </form>
+    </div>
+  </body>
+  <script src="assets/js/register.js"></script>
+</html>
