@@ -23,8 +23,8 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     filter: blur(5px);
     width: 100%;
-    height: 100vh;
-    position: absolute;
+    height: 100%;
+    position: fixed;
 }
 
 header {
@@ -355,6 +355,22 @@ main {
         bottom: 15%;
         right: 1.5rem;
     }
+    .card-footer span:nth-of-type(1) {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .card-footer span:nth-of-type(2) {
+        font-size: 1.3rem;
+    }
+    .card-action {
+        opacity:0.8;
+        bottom: 20%;
+        right: 0.8rem;
+    }
+    .card {
+        width: 25vw;
+    }
     @keyframes bg {
 
         0%,
@@ -413,47 +429,71 @@ main {
     body {
         height: 100%;
     }
-
+    .black-holder {
+        left: 40vw;
+        width: 100vw;
+    }
+    .char-wrapper{
+        padding-left:0;
+        padding-right:0;
+    }
+    .char-role {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .achievement{
+        flex-direction: column;
+    }
+    .char-info h2{
+        font-size:2.5rem;
+    }
+    .badges{
+        width:50vw;
+    }
+    .badge{
+        width:20vw;
+        font-size: 0.5rem;
+    }
+    .card-action {
+        opacity:0.7;
+        bottom: 8%;
+        right: 0.2rem;
+    }
+    .card {
+        width: 30vw;
+    }
+    .char-wrapper img {
+        width: 120%;
+        flex:content;
+    }
 }
 
+/* galaxy fold */
 @media (max-width: 300px) {
-    body {
-        background-size: cover;
+    .char-role {
+        font-size: 1rem;
+        font-weight: 400;
     }
-
-    @keyframes bg {
-
-        0%,
-        100% {
-            background-image: url("../img/bg1.webp");
-        }
-
-        20% {
-            background-image: url("../img/bg1.webp");
-        }
-
-        25% {
-            background-image: url("../img/bg2.jpeg");
-        }
-
-        45% {
-            background-image: url("../img/bg2.jpeg");
-        }
-
-        50% {
-            background-image: url("../img/bg3.webp");
-        }
-
-        70% {
-            background-image: url("../img/bg3.webp");
-        }
-
-        75% {
-            background-image: url("../img/bg4.jpg");
-        }
-
-        95% {
-            background-image: url("../img/bg4.jpg");
-        }
+    .achievement{
+        flex-direction: column;
+    }
+    .char-info h2{
+        font-size:2.5rem;
+    }
+    .badges{
+        width:70vw;
+    }
+    .badge{
+        width:28vw;
+        font-size: 0.5rem;
+    }
+    .card-action {
+        opacity:0.7;
+        bottom: 4.3%;
+        right: 0.2rem;
+    }
+    .card {
+        width: 50vw;
+        margin-right:1rem;
     }
 }
