@@ -29,7 +29,6 @@ body {
 
 header {
     opacity: 0.9 !important;
-    ;
 }
 
 main {
@@ -74,6 +73,10 @@ main {
     width: 100%;
     height: 1rem;
     border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.char-info{
+    flex:1;
 }
 
 .char-info h2 {
@@ -137,8 +140,6 @@ main {
     background-color: rgba(1, 164, 143, 0.5);
 }
 
-
-
 .description {
     margin: 1rem 0rem 1rem 0;
     padding: 1rem 1rem 1rem 3rem;
@@ -196,8 +197,7 @@ main {
 
 .card {
     --blur: 16px;
-    --size: clamp(100px, 20vw, 250px);
-    width: var(--size);
+    width: 20vw;
     aspect-ratio: 4 / 3;
     position: relative;
     border-radius: 15px;
@@ -235,11 +235,10 @@ main {
 
 .card-action {
     position: absolute;
-    aspect-ratio: 1;
-    width: calc(var(--size) * 0.15);
+    width: calc(20vw * 0.15);
     bottom: 30%;
     right: 1.5rem;
-    transform: translateY(50%) translateY(calc((var(--size) * 0.4))) translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+    transform: translateY(50%) translateY(10vw) translateY(calc(var(--hover, 0) * -10vw));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -260,17 +259,13 @@ main {
     color: rgba(113, 240, 13, 0.8);
 }
 
-.card-action svg {
-    aspect-ratio: 1;
-    width: 50%;
-}
-
 .card-footer span:nth-of-type(1) {
-    font-size: calc(var(--size) * 0.065);
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 .card-footer span:nth-of-type(2) {
-    font-size: calc(var(--size) * 0.035);
+    font-size: 1rem;
 }
 
 .card:is(:hover, :focus-visible) {
@@ -331,58 +326,84 @@ main {
 
     .black-holder {
         top: 0;
-        left: 60vw;
-        width: 50vw;
+        left: 50vw;
+        width: 65vw;
     }
-    
+    .char-wrapper{
+        padding-top:1vh;
+    }
+    .char-role{
+        font-size:2.5rem;
+    }
+    .char-info h2{
+        font-size:3.5rem;
+    }
+
+    .description{
+        width:100%;
+        max-width:55vw;
+    }
+    .badge{
+        padding:0.3rem;
+        width:13vw;
+    }
+    .fa-trophy {
+        padding: 8px;
+    }
+    .card-action {
+
+        bottom: 15%;
+        right: 1.5rem;
+    }
     @keyframes bg {
 
         0%,
         100% {
             /* height:100% auto; */
-            background-size: 150% auto;
+            background-size:cover;
+            /* background-size: 150% auto */
             background-image: url("../img/bg1.webp");
         }
 
         20% {
             /* height:105% auto; */
-            background-size: 155% auto;
+            /* background-size: 155% auto; */
             background-image: url("../img/bg1.webp");
         }
 
         25% {
             /* height:105% auto; */
-            background-size: 155% auto;
+            /* background-size: 155% auto; */
             background-image: url("../img/bg2.jpeg");
         }
 
         45% {
             /* height:100% auto; */
-            background-size: 150% auto;
+            /* background-size: 150% auto; */
             background-image: url("../img/bg2.jpeg");
         }
 
         50% {
             /* height:100% auto; */
-            background-size: 150% auto;
+            /* background-size: 150% auto; */
             background-image: url("../img/bg3.webp");
         }
 
         70% {
             /* height:103% auto; */
-            background-size: 153% auto;
+            /* background-size: 153% auto; */
             background-image: url("../img/bg3.webp");
         }
 
         75% {
             /* height:103% auto; */
-            background-size: 153% auto;
+            /* background-size: 153% auto; */
             background-image: url("../img/bg4.jpg");
         }
 
         95% {
             /* height:100% auto; */
-            background-size: 150% auto;
+            /* background-size: 150% auto; */
             background-image: url("../img/bg4.jpg");
         }
     }
@@ -393,57 +414,6 @@ main {
         height: 100%;
     }
 
-    @keyframes bg {
-
-        0%,
-        100% {
-            /* height:100% auto; */
-            background-size: 220% auto;
-            background-image: url("../img/bg1.webp");
-        }
-
-        20% {
-            /* height:105% auto; */
-            background-size: 210% auto;
-            background-image: url("../img/bg1.webp");
-        }
-
-        25% {
-            /* height:105% auto; */
-            background-size: 210% auto;
-            background-image: url("../img/bg2.jpeg");
-        }
-
-        45% {
-            /* height:100% auto; */
-            background-size: 220% auto;
-            background-image: url("../img/bg2.jpeg");
-        }
-
-        50% {
-            /* height:100% auto; */
-            background-size: 220% auto;
-            background-image: url("../img/bg3.webp");
-        }
-
-        70% {
-            /* height:103% auto; */
-            background-size: 210% auto;
-            background-image: url("../img/bg3.webp");
-        }
-
-        75% {
-            /* height:103% auto; */
-            background-size: 220% auto;
-            background-image: url("../img/bg4.jpg");
-        }
-
-        95% {
-            /* height:100% auto; */
-            background-size: 210% auto;
-            background-image: url("../img/bg4.jpg");
-        }
-    }
 }
 
 @media (max-width: 300px) {
