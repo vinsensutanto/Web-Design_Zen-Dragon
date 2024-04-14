@@ -1,4 +1,4 @@
-html{
+html {
     overflow-x: hidden;
 }
 
@@ -10,6 +10,14 @@ body {
     overflow-x: hidden;
 }
 
+#strike-body {
+    background-image: url("../img/bg-si.webp");
+}
+
+#tidal-body {
+    background-image: url("../img/bg-ti.webp");
+}
+
 main {
     font-family: "New Rocker", system-ui;
     font-weight: 400;
@@ -19,12 +27,19 @@ main {
 }
 
 .content-wrapper {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     background: radial-gradient(circle, rgba(255, 202, 121, 0.5) 0%, rgba(154, 119, 35, 0.5) 100%) !important;
     width: 100%;
     height: 100%;
+}
+
+#strike-cw {
+    background: radial-gradient(circle, rgba(130, 110, 255, 0.5) 0%, rgba(160, 145, 222, 0.5) 100%) !important;
+}
+#tidal-cw {
+    background: radial-gradient(circle, rgba(110, 238, 255, 0.5) 0%, rgba(145, 184, 222, 0.5) 100%) !important;
 }
 
 .cw-deco {
@@ -60,17 +75,6 @@ main {
     z-index: -1;
 }
 
-.logo-class {
-    position: absolute;
-    background-image: url("../img/boulderlogo.webp");
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 1;
-    opacity: 1;
-}
-
 a {
     text-decoration: none;
 }
@@ -95,6 +99,15 @@ a {
     gap: 10px;
     margin-top: 40px;
     color: rgba(255, 202, 121, 1);
+}
+
+#strike-lt {
+    color: rgba(204, 196, 237, 1);
+}
+
+#tidal-lt {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    color: rgb(196, 230, 237);
 }
 
 .img-drag {
@@ -132,6 +145,17 @@ a {
     padding: 0;
 }
 
+
+.dragonClass-info #strikeText {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    color: rgb(241, 238, 255);
+}
+
+.dragonClass-info #tidalText {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    color: rgb(238, 255, 255);
+}
+
 .dragonClass-info h1 {
     text-transform: uppercase;
     font-size: 3rem !important;
@@ -141,6 +165,16 @@ a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.dragonClass-info h1#strikeText {
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(197, 187, 255) 90%);
+    background-clip: text;
+}
+
+.dragonClass-info h1#tidalText {
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(187, 231, 255) 90%);
+    background-clip: text;
 }
 
 .desc-wrapper {
@@ -154,6 +188,16 @@ a {
     display: flex;
     gap: 15px;
     margin-bottom: 14px;
+}
+
+#strike-dc {
+    border: 1px solid rgb(135, 80, 223);
+    background: linear-gradient(180deg, rgba(255, 203, 242, 0.2) 0%, rgb(197, 187, 255, 0.09) 90%);
+}
+
+#tidal-dc {
+    border: 1px solid rgb(35, 53, 132);
+    background: linear-gradient(180deg, rgba(255, 203, 242, 0.2) 0%, rgb(197, 187, 255, 0.09) 90%);
 }
 
 .left-text h6 {
@@ -200,6 +244,14 @@ a {
     flex: 1;
 }
 
+#strike-attr {
+    border: 1px solid rgb(135, 80, 223);
+}
+
+#tidal-attr {
+    border: 1px solid rgb(36, 38, 168);
+}
+
 .attr-level {
     color: rgba(255, 224, 183, 1);
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
@@ -211,6 +263,14 @@ a {
     /* margin-top: 1rem; */
 }
 
+#strike-attr-lv {
+    color: rgb(238, 183, 255);
+}
+
+#tidal-attr-lv {
+    color: rgb(183, 247, 255);
+}
+
 .attribute p {
     font-size: 14px;
     line-height: 16px;
@@ -220,6 +280,18 @@ a {
     padding: 3px;
     border-top: 1px solid rgba(223, 166, 80);
     background: linear-gradient(180deg, rgba(255, 202, 121, 0.20) 0%, rgba(196, 137, 59, 0.09) 100%);
+}
+
+#strike-attr-p {
+    color: rgb(238, 183, 255);
+    border-top: 1px solid rgb(164, 80, 223);
+    background: linear-gradient(180deg, rgba(244, 121, 255, 0.2) 0%, rgba(196, 59, 187, 0.09) 100%);
+}
+
+#tidal-attr-p {
+    color: rgb(183, 232, 255);
+    border-top: 1px solid rgb(25, 25, 164);
+    background: linear-gradient(180deg, rgba(121, 204, 255, 0.2) 0%, rgba(59, 59, 196, 0.09) 100%);
 }
 
 .back-btn {
@@ -235,6 +307,16 @@ a {
     text-decoration: none;
     transition: all ease 0.5s;
     cursor: pointer;
+}
+
+#strike-back-btn {
+    border: 1px solid rgb(164, 80, 223);
+    background: linear-gradient(180deg, rgba(244, 121, 255, 0.6) 0%, rgba(196, 59, 187, 0.5) 100%);
+}
+
+#tidal-back-btn {
+    border: 1px solid rgb(80, 125, 223);
+    background: linear-gradient(180deg, rgba(121, 213, 255, 0.6) 0%, rgba(37, 28, 171, 0.5) 100%);
 }
 
 .back-btn a {
@@ -296,7 +378,7 @@ a {
 }
 
 #cloud-wrapper {
-    height:100%;
+    height: 100%;
     width: 100%;
     position: absolute;
     opacity: 0.2;
@@ -337,7 +419,7 @@ a {
 }
 
 .cd2 {
-    top:10px;
+    top: 10px;
     left: 10px;
     transform: scale(0.5);
     opacity: 0.6;
@@ -394,93 +476,108 @@ a {
 }
 
 @media (max-width:820px) or (max-width:1024px) {
-    .content-wrapper{
+    .content-wrapper {
         justify-content: center;
-        align-items:center;
+        align-items: center;
         align-content: center;
     }
-    .img-drag{
-        margin-left:auto;
-        margin-right:auto;
-        width:75%;
+
+    .img-drag {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
     }
-    .img-drag .bg-img{
-        width:85%;
+
+    .img-drag .bg-img {
+        width: 85%;
         top: 10vh;
-        right:2vw;
+        right: 2vw;
     }
-    .dragonClass-info{
-        padding:5em;
-        margin-bottom:2em;
+
+    .dragonClass-info {
+        padding: 5em;
+        margin-bottom: 2em;
     }
 
     .dragonClass-info h5 {
         font-size: 1.5rem;
         letter-spacing: 1rem;
     }
-    
+
     .dragonClass-info h1 {
         font-size: 3rem !important;
         letter-spacing: 1.5rem;
         line-height: 3rem;
     }
+
     .desc-box img {
         width: 100%;
     }
-    .desc-class h5{
-        font-size:1.5rem;
+
+    .desc-class h5 {
+        font-size: 1.5rem;
     }
-    .desc-class p{
-        font-size:1rem;
-        line-height:2rem;
+
+    .desc-class p {
+        font-size: 1rem;
+        line-height: 2rem;
         /* letter-spacing: 0.3rem; */
     }
 }
 
-@media (max-width:420px){
-    .img-drag{
-        width:70%;
+@media (max-width:420px) {
+    .img-drag {
+        width: 70%;
     }
-    .left-text{
+
+    .left-text {
         margin-left: 0.5rem;
     }
-    .dragonClass-info{
-        width:100%;
-        padding:1.5em;
-        margin-bottom:4em;
+
+    .dragonClass-info {
+        width: 100%;
+        padding: 1.5em;
+        margin-bottom: 4em;
     }
+
     .dragonClass-info h5 {
         font-size: 1rem;
         letter-spacing: 0.5rem;
     }
-    
+
     .dragonClass-info h1 {
         font-size: 2rem !important;
         letter-spacing: 1.5rem;
         line-height: 2.5rem;
     }
-    .desc-wrapper{
-        width:95%;
+
+    .desc-wrapper {
+        width: 95%;
     }
-    .desc-class{
-        padding:1em;
+
+    .desc-class {
+        padding: 1em;
     }
-    .desc-box{
-        position:absolute;
-        right:10vw;
-        width:10vw;
+
+    .desc-box {
+        position: absolute;
+        right: 10vw;
+        width: 10vw;
     }
-    .attr-wrapper{
+
+    .attr-wrapper {
         flex-wrap: wrap;
     }
-    .nav-class{
+
+    .nav-class {
         align-items: end;
         justify-self: end;
-        opacity:0.1;
-        --size:6rem;
+        opacity: 0.1;
+        --size: 6rem;
         font-size: 1.2rem;
     }
-    .nav-class:hover{
-        opacity:0.8;
+
+    .nav-class:hover {
+        opacity: 0.8;
     }
 }
