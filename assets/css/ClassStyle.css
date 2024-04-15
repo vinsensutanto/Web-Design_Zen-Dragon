@@ -21,16 +21,6 @@ body {
   /* clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 50%); */
 }
 
-/* .bottom {
-  
-  clip-path: polygon(0% 50%, 100% 40%, 100% 100%, 0% 90%);
-  color: transparent;
-  background: linear-gradient(179deg, rgba(113, 240, 13,0.1) 53%, rgba(253, 114, 13) 65%);
-  background-clip: text;
-  text-shadow:1px 1px 10px rgba(253, 114, 13), 1px 1px 10px rgba(253, 114, 13);
-  transform: translateX(-0.02em);
-  transform: translateY(-1.2em);
-} */
 
 
 .card-wrapper {
