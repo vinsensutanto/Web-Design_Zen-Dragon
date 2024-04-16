@@ -2,6 +2,7 @@ body {
     font-family: "New Rocker", system-ui;
     font-weight: 400;
     background-color: black;
+    overflow-x: hidden;
 }
 
 .content-wrapper {
@@ -53,18 +54,18 @@ body {
 #info-isle {
     opacity: 1;
     transition: opacity .5s ease-out;
-    z-index:2;
-    position:absolute;
+    z-index: 2;
+    position: absolute;
     display: flex;
     padding: 1rem;
     width: 30%;
     flex-direction: column;
 }
 
-.hide-info{
-    opacity: 0!important;
+.hide-info {
+    opacity: 0 !important;
     transition: opacity .5s ease-out;
-    z-index:-1!important;
+    z-index: -1 !important;
 }
 
 .info_image {
@@ -111,19 +112,19 @@ body {
 }
 
 .info_text {
-    letter-spacing:0.1em;
+    letter-spacing: 0.1em;
     line-height: 1.3em;
-    font-size:1em;
+    font-size: 1em;
     overflow-y: scroll;
     color: white;
     width: 100%;
     text-align: justify;
     border-left: white solid 1px;
-    padding-left:0.2rem;
+    padding-left: 0.2rem;
 }
 
-.info_text::-webkit-scrollbar{
-    display:none;
+.info_text::-webkit-scrollbar {
+    display: none;
 }
 
 #hover-deathland {
@@ -135,7 +136,7 @@ body {
     width: 5em;
     height: 5em;
     top: 15%;
-    right:38%;
+    right: 38%;
     background-color: rgba(255, 255, 255, 0.2);
     z-index: 1;
     border-radius: 100%;
@@ -145,12 +146,12 @@ body {
 #info-deathland {
     opacity: 1;
     transition: opacity .5s ease-out;
-    z-index:2;
-    position:absolute;
+    z-index: 2;
+    position: absolute;
     display: flex;
     padding: 1rem;
     width: 30%;
-    left:25%;
+    left: 25%;
     flex-direction: column;
 }
 
@@ -163,7 +164,7 @@ body {
     width: 5em;
     height: 5em;
     bottom: 37%;
-    left:23%;
+    left: 23%;
     background-color: rgba(255, 255, 255, 0.2);
     z-index: 1;
     border-radius: 100%;
@@ -173,13 +174,13 @@ body {
 #info-blackbay {
     opacity: 1;
     transition: opacity .5s ease-out;
-    z-index:2;
-    position:absolute;
+    z-index: 2;
+    position: absolute;
     display: flex;
     padding: 1rem;
     width: 30%;
     bottom: 10%;
-    left:28%;
+    left: 28%;
     flex-direction: column;
 }
 
@@ -192,7 +193,7 @@ body {
     width: 5em;
     height: 5em;
     bottom: 18%;
-    right:45%;
+    right: 45%;
     background-color: rgba(255, 255, 255, 0.2);
     z-index: 1;
     border-radius: 100%;
@@ -202,13 +203,13 @@ body {
 #info-isleofdoom {
     opacity: 1;
     transition: opacity .5s ease-out;
-    z-index:2;
-    position:absolute;
+    z-index: 2;
+    position: absolute;
     display: flex;
     padding: 1rem;
     width: 30%;
     bottom: 5%;
-    left:17%;
+    left: 17%;
     flex-direction: column;
 }
 
@@ -221,7 +222,7 @@ body {
     width: 5em;
     height: 5em;
     bottom: 38%;
-    right:23%;
+    right: 23%;
     background-color: rgba(255, 255, 255, 0.2);
     z-index: 1;
     border-radius: 100%;
@@ -231,13 +232,13 @@ body {
 #info-meathead {
     opacity: 1;
     transition: opacity .5s ease-out;
-    z-index:2;
-    position:absolute;
+    z-index: 2;
+    position: absolute;
     display: flex;
     padding: 1rem;
     width: 30%;
     bottom: 20%;
-    right:28%;
+    right: 28%;
     flex-direction: column;
 }
 
@@ -250,7 +251,7 @@ body {
     width: 5em;
     height: 5em;
     top: 28%;
-    right:17%;
+    right: 17%;
     background-color: rgba(255, 255, 255, 0.2);
     z-index: 1;
     border-radius: 100%;
@@ -260,21 +261,152 @@ body {
 #info-meatheadnorth {
     opacity: 1;
     transition: opacity .5s ease-out;
-    z-index:2;
-    position:absolute;
+    z-index: 2;
+    position: absolute;
     display: flex;
     padding: 1rem;
     width: 30%;
     top: 20%;
-    right:23%;
+    right: 23%;
     flex-direction: column;
 }
 
-.tips{
-    font-size:1.3em;
-    margin-left:8%;
-    position:absolute;
-    color:white;
-    z-index:1;
+.tips {
+    font-size: 1.3em;
+    margin-left: 8%;
+    position: absolute;
+    color: white;
+    z-index: 1;
     text-shadow: black 15px 1px 15px;
+}
+
+.secondary-title {
+    text-align: center;
+    margin: 10vh;
+    font-size: 3.5rem;
+    color: black;
+    text-shadow: 1px 1px 10px rgba(253, 114, 13), 1px 1px 10px rgba(253, 114, 13);
+}
+
+#journey-wrapper1 {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+}
+
+#journey-wrapper2 {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    width: 100%;
+    flex-direction: row-reverse;
+    display: flex;
+}
+
+.jrnBox-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    transition: filter 0.5s ease-out;
+    filter: grayscale(100%);
+}
+
+.jrnBox {
+    position: relative;
+    width: 20%;
+    height: 75vh;
+    overflow: hidden;
+    transition: width 0.5s ease-out;
+}
+
+.jrnBox:before,
+.jrnBox:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.jrnBox:after {
+    background: opacify(black, 0.05);
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.jrnBox:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.jrnBox:hover {
+    width: 25% !important;
+}
+
+.jrnBox:hover:after {
+    opacity: 0;
+}
+
+.jrnBox:hover:before {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.75s ease-out, transform 0.75s ease-out 0.25s;
+}
+
+.jrnBox:hover .jrnBox-desc {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.75s ease-out 0.5s;
+}
+
+.jrnBox:hover .jrnBox-bg {
+    filter: grayscale(0);
+}
+
+.jrnBox-title {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    line-height: 0;
+    font-size: 2rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 1;
+}
+
+.jrnBox-desc {
+    transform: translateY(25px);
+    position: relative;
+    text-align: center;
+    margin: 1.5em;
+    top: 35%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.jrnBox-desc h1 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.jrnBox-desc p {
+    color: white;
+}
+
+.separator {
+    margin-top:-8vh;
+    position: relative;
+    /* bottom: 0; */
+    width: 100%;
+    height: 8vh;
+    background: linear-gradient(180deg, rgba(47, 46, 57, 0) 0%, rgba(47, 46, 57, 1) 100%);
+    ;
 }
