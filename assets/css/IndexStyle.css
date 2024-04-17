@@ -1,0 +1,450 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgb(64, 162, 201);
+  font-family: "New Rocker", system-ui;
+}
+
+.bg {
+  background-color: black;
+}
+
+.main-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+
+.main-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.parallax-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.main-img {
+  background: url('../img/banner/img-main.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(-600px) scale(3);
+  z-index: 1;
+}
+
+.clouds {
+  background: url('../img/banner/clouds.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(-525px) scale(2.75);
+  z-index: 2;
+}
+
+.deco {
+  background: url('../img/banner/splashes.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(-400px) scale(2.33333333);
+  z-index: 3;
+}
+
+.bot-img {
+  width: 100%;
+  background: url('../img/banner/waves3.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(0) scale(1);
+  z-index: 4;
+}
+
+.overlay {
+  background: linear-gradient(rgba(255, 255, 255, 0.25) 0%,
+      rgba(116, 239, 255, 0.25) 86%,
+      rgba(1, 0, 0, 0.25) 100%);
+  background-size: cover;
+  transform: translateZ(0) scale(1);
+  z-index: 5;
+}
+
+.overlay h2 {
+  text-align: right;
+  width: 30vw;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  /* text-shadow: black 2px 10px 15px; */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.title h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 10%;
+  letter-spacing: 1rem;
+  font-weight: 500;
+  -webkit-text-stroke: 4px rgba(255, 255, 255, 1);
+}
+
+.title h1:nth-child(1) {
+  color: transparent;
+}
+
+.title h1:nth-child(2) {
+  color: rgba(157, 231, 245, 0.7);
+  animation: animate 4s ease-in-out infinite;
+}
+
+.title h1:nth-child(3) {
+  color: rgba(43, 172, 198, 0.7);
+  animation: animate 3s ease infinite;
+}
+
+.title h1:nth-child(4) {
+  color: rgba(255, 255, 255, 0.2);
+  animation: animate 10s linear infinite;
+}
+
+.section-title {
+  max-width: 50%;
+  margin: 5% 10%;
+}
+
+.shadow {
+  /* color: white; */
+  font-weight: bold;
+  text-shadow:
+    -3px -3px 0 rgba(15, 20, 29, 1),
+    3px -3px 0 rgba(15, 20, 29, 1),
+    -3px 3px 0 rgba(15, 20, 29, 1),
+    3px 3px 0 rgba(15, 20, 29, 1),
+    4px 4px 0 white,
+    5px 5px 0 white,
+    6px 6px 0 white,
+    7px 7px 0 white;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  margin: 0;
+  text-align: center;
+}
+
+.border {
+  font-family: "Jacquard 24", system-ui;
+  text-align: center;
+  font-size: 2em;
+  position: relative;
+  margin: 0;
+}
+
+.border span {
+  background-color: rgba(15, 20, 29, 1);
+  padding: 0 0.3em;
+}
+
+.border:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  width: 100%;
+  border-bottom: 3px solid white;
+}
+
+.ac-title {
+  font-size: 5em;
+  line-height: 1em;
+}
+
+.info-container {
+  height: fit-content !important;
+  background: rgb(15, 20, 29);
+  transform: translateZ(0) scale(1);
+  z-index: 6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section-desc {
+  padding: 3em;
+}
+
+.section-desc {
+  width: 60%;
+}
+
+.desc-img {
+  max-width: 600px;
+  border-bottom-left-radius: 10%;
+  border-top-right-radius: 10%;
+  width: 100%;
+  box-shadow:
+    -50px -50px 0 -40px rgba(32, 43, 62, 0.8),
+    50px 50px 0 -40px rgba(32, 43, 62, 0.8);
+}
+
+.second-wrapper {
+  position: relative;
+  /* clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%); */
+  width: 100%;
+  height: 30vh;
+  /* background-color: rgb(7, 32, 43); */
+  background: radial-gradient(rgba(24, 31, 45, 0.9), rgba(15, 20, 29, 1));
+}
+
+.Reflection {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: Uppercase;
+  font-size: 2.3em;
+}
+
+.Reflection::before {
+  text-align: center;
+  content: attr(data-text);
+  position: absolute;
+  transform-origin: bottom;
+  transform: rotatex(180deg);
+  line-height: 1.1em;
+  background: linear-gradient(0deg, #fff 0, transparent 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.5;
+}
+
+.second-title {
+  position: absolute;
+  text-align: center;
+  color: white;
+  margin: 0;
+  left: 5%;
+  width: 15%;
+  z-index: 1;
+  font-size: 3em;
+  padding: 3em 0em;
+}
+
+.second-section {
+  clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
+  background-color: black;
+  height: 100%;
+  padding: 3em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.second-section h3 {
+  font-size: 3em;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  width: 15vw;
+  background-color: rgba(23, 22, 28, 0.9);
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem black;
+  transition: 0.5s ease-out;
+  position: relative;
+  margin-left: -50px;
+  transform: translateY(0px);
+  overflow-y: scroll;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.5s ease-out;
+}
+
+.card:hover~.card {
+  position: relative;
+  left: 50px;
+  transition: 0.5s ease-out;
+}
+
+.card-title {
+  color: white;
+  font-size: 1.5em !important;
+  margin: 1em auto;
+}
+
+.line {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  height: 2.5px;
+  width: 80%;
+}
+
+.emptyline {
+  background-color: rgba(46, 44, 55);
+  width: 100%;
+  height: 100%;
+}
+
+.filledline {
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(140, 222, 255) 0%, rgb(178, 142, 255) 65%, rgb(220, 137, 255) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledline {
+  width: 100%;
+  transition: 0.5s ease-out;
+}
+
+.second-desc {
+  font-size: 0.8em;
+  padding: 0rem 1rem;
+}
+
+.third-section {
+  clip-path: polygon(100% 5%, 100% 100%, 0 100%, 0 5%, 50% 0);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.212);
+}
+
+.third-title {
+  margin: 1em auto 0.5em;
+  font-size: 4em;
+  text-align: center;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 1);
+  letter-spacing: 0.2em;
+  color: transparent;
+}
+
+.img-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  transition: 1.5s;
+}
+
+.img-wrapper img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.third-section .buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-section .buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.waving-transition {
+  bottom:0;
+  z-index:1;
+  position:absolute;
+  --mask:
+    radial-gradient(67.08px at 50% 90px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  width:100%;
+  height:10vh;background: rgb(48,46,58);
+  background: linear-gradient(0deg, rgba(48,46,58,1) 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%);
+  }
+}
+
+@media (max-width: 1024px) or (max-width:820px) {}
+
+@media (max-width:420px) {}
