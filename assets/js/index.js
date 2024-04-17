@@ -17,23 +17,18 @@ prev.onclick = function(){
 let refreshInterval = setInterval(()=> {next.click()}, 3000);
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
-    // 
-    let last_active_dot = document.querySelector('.third-section .dots li.active');
-    last_active_dot.classList.remove('active');
-    dots[active].classList.add('active');
-
     clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000);
-
-    
+    refreshInterval = setInterval(()=> {next.click()}, 9000);
 }
-
-dots.forEach((li, key) => {
-    li.addEventListener('click', ()=>{
-         active = key;
-         reloadSlider();
-    })
-})
 window.onresize = function(event) {
     reloadSlider();
 };
+function navDrag(){
+    window.location = "dragonClass.html";
+}
+function navChar(){
+    window.location = "character.html";
+}
+function navIsle(){
+    window.location = "isle.html";
+}
