@@ -1,7 +1,7 @@
 body {
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 0.1rem;
-    background-color: black;
+	font-family: "Bebas Neue", sans-serif;
+	letter-spacing: 0.1rem;
+	background-color: black;
 }
 
 .list {
@@ -19,8 +19,8 @@ body {
 	border-radius: 0.25rem;
 	overflow: hidden;
 	background-color: white;
-    margin: 3rem auto;
-    padding: 3rem 2rem 2rem;
+	margin: 3rem auto;
+	padding: 3rem 2rem 2rem;
 }
 
 .item::before {
@@ -31,7 +31,7 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: linear-gradient(to right, rgb(113, 240, 13,1) 0%, rgba(253, 114, 13,0.3) 30%);
+	background: linear-gradient(to right, rgb(113, 240, 13, 1) 0%, rgba(253, 114, 13, 0.3) 30%);
 }
 
 h3 {
@@ -52,34 +52,35 @@ h3::before {
 	padding: 1rem;
 	border-radius: 50%;
 	background-color: rgba(49, 46, 65);
-    color:rgba(49, 46, 65);
+	color: rgba(49, 46, 65);
 	color: white;
-    font-size:3rem;
+	font-size: 3rem;
 }
 
 main ul li ol li {
-    font-size:1.5em;
-    color:black;
+	font-size: 1.5em;
+	color: black;
 	margin: 0;
 	line-height: 1.6;
 }
 
+/* Handphone */
 @media (max-width: 420px) {
 	.item {
-        max-width:18rem;
+		max-width: 18rem;
 	}
-	
+
 	h3 {
 		font-size: 1.25rem;
 	}
-	
+
 	h3::before {
-        width: 0.5rem;
-        height: 0.5rem;
-        font-size:1rem;
+		width: 0.5rem;
+		height: 0.5rem;
+		font-size: 1rem;
 	}
 
-    main ul li ol li {
-        font-size:0.8em;
-    }
+	main ul li ol li {
+		font-size: 0.8em;
+	}
 }
