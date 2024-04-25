@@ -9,7 +9,7 @@ const regisForm = document.getElementById("regisForm");
 let valid=0;
 
 //validasi huruf besar di awal kata
-function capitalFirst(str) {
+function validFirstLetter(str) {
   if (!notEmpty(str)) {
     return false;
   }
@@ -96,7 +96,7 @@ const handleFormevent = (event) => {
   if (!notEmpty(fName.value)) {
     valid--;
     errorFname.innerHTML = "First name musn't be empty";
-  } else if (!capitalFirst(fName.value)) {
+  } else if (!validFirstLetter(fName.value)) {
     valid--;
     errorFname.innerHTML = "First letter must be capital";
   }else{
@@ -106,7 +106,7 @@ const handleFormevent = (event) => {
   if (!notEmpty(lName.value)) {
     valid--;
     errorLname.innerHTML = "Last name musn't be empty";
-  } else if (!capitalFirst(lName.value)) {
+  } else if (!validFirstLetter(lName.value)) {
     valid--;
     errorLname.innerHTML = "First letter must be capital";
   }else{
