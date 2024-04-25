@@ -92,7 +92,7 @@ form p {
     cursor: text;
 }
 
-input:is(:focus, :valid)+.placeholder {
+input:is(:focus,:not(:placeholder-shown))+.placeholder {
     background-color: rgb(155, 155, 155, 0.65);
     border: 2px solid rgba(255, 255, 0, 0.3);
     border-radius: 25px;
@@ -114,7 +114,7 @@ input {
     font-weight: 300;
 }
 
-input:is(:focus, :valid) {
+input:is(:focus,:not(:placeholder-shown)) {
     border: 2px solid rgba(255, 255, 0, 0.3);
 }
 
@@ -197,7 +197,7 @@ form textarea{
     resize: none;
 }
 
-form textarea:is(:focus,:valid){
+form textarea:is(:focus,:not(:placeholder-shown)){
     border-color: rgb(160, 160, 0,0.5);
 }
 
@@ -254,7 +254,7 @@ button:is(:hover,:active){
         line-height: 7vw;
     }
 
-    #inputN {
+    #inputN,#inputL,#address,#email,#password {
         font-size: 1.8vw;
     }
     
@@ -263,11 +263,10 @@ button:is(:hover,:active){
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 420px){
     form {
-        padding: 3% 10%;
+        padding: 3% 12%;
     }
-
     form h2 {
         margin-top: 5%;
         font-size: 3.5vw;
@@ -276,10 +275,50 @@ button:is(:hover,:active){
     p {
         font-size: 4vw!important;
     }
-    input {
-        font-size: 1px!important;
+    #inputN,#inputL,#address,#email,#password {
+        font-size: 3vw;
     }
     .male, .female{
         font-size:12px!important;
+    }
+    .input-wrapper {
+        --padding: 10px;
+        margin:1rem 0;
+    }
+    input {
+        padding: 0 7%;
+        height: 30px;
+    }
+    .placeholder{
+        font-size:0.7rem;
+    }
+    input:is(:focus,:not(:placeholder-shown))+.placeholder {
+        font-size: 10px;
+    }
+    .radio-wrapper .option {
+        margin: 0px 5px;
+    }
+    .radio-wrapper .option .dot {
+        height: 15px;
+        width: 15px;
+        margin-right: 5px;
+    }
+    
+    .radio-wrapper .option .dot::before {
+        top: 2px;
+        left: 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(1.5);
+        transition: all 0.3s ease;
+    }
+    button {
+        width: 55%;
+        background-color: rgba(220, 220, 0, 0.5);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 8px 0;
+        margin: top 0.5rem;
     }
 }
