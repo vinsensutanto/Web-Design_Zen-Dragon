@@ -175,7 +175,7 @@ main {
 }
 
 .char-wrapper img {
-    max-width:550px;
+    max-width:500px;
     /* max-height:400px; */
     flex: 1;
     /* position:absolute; */
