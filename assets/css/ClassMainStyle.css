@@ -572,7 +572,7 @@ a {
     .nav-class {
         align-items: end;
         justify-self: end;
-        opacity: 0.1;
+        opacity: 0.5;
         --size: 6rem;
         font-size: 1.2rem;
     }
