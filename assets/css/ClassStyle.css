@@ -130,7 +130,7 @@ body {
   clip-path: polygon(50% 1%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
 }
 
-/* Ipad Pro / Ipad Air / Ipad Mini */
+/* Ipad Responsive */
 @media (max-width:1024px) {
   .page-title {
     font-size: 6em;
@@ -150,7 +150,7 @@ body {
   }
 }
 
-/* Handphone */
+/* Phone Responsive */
 @media (max-width:420px) {
   html {
     overflow-x: hidden;

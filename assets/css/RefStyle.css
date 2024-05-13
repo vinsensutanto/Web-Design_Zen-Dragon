@@ -64,7 +64,7 @@ main ul li ol li {
 	line-height: 1.6;
 }
 
-/* Handphone */
+/* Phone Responsive */
 @media (max-width: 420px) {
 	.item {
 		max-width: 18rem;
