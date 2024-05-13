@@ -484,6 +484,9 @@ input:is(:focus, :valid) {
         margin-top:2vh;
         margin-bottom: 2vh;
     }
+    .input-wrapper input{
+      font-size:1em;
+    }
 }
 
 /* Tablet and PC footer mode */
@@ -513,5 +516,9 @@ input:is(:focus, :valid) {
     }
     .imgFooter img{
         width: 60vw;
+    }
+
+    .input-wrapper input{
+      font-size:1em;
     }
 }
