@@ -6,9 +6,9 @@ const errorAddress = document.getElementById("errAddress");
 const errorEmail = document.getElementById("errEmail");
 const errorPassword = document.getElementById("errPassword");
 const regisForm = document.getElementById("regisForm");
-let valid=0;
+let valid = 0;
 
-//validasi huruf besar di awal kata
+//1. validasi huruf besar di awal kata
 function validFirstLetter(str) {
   if (!notEmpty(str)) {
     return false;
@@ -20,7 +20,7 @@ function validFirstLetter(str) {
   }
 }
 
-//validasi input tidak kosong
+//2. validasi input tidak kosong
 function notEmpty(str) {
   if (str === "") {
     return false;
@@ -29,7 +29,7 @@ function notEmpty(str) {
   }
 }
 
-//validasi ada nomor di dalam input
+//3. validasi ada nomor di dalam input
 function containNumber(str) {
   let num = false;
   str.split("").forEach((c) => {
@@ -38,7 +38,7 @@ function containNumber(str) {
   return num;
 }
 
-//validasi password harus kuat
+//4. validasi password harus kuat (Huruf kapital, huruf kecil, dan angka)
 function validPassword(str) {
   let num,
     lwr,
@@ -49,12 +49,17 @@ function validPassword(str) {
     if (c >= "0" && c <= "9") num = true;
     if (c >= "a" && c <= "z") lwr = true;
     if (c >= "A" && c <= "Z") upr = true;
-    if (!(c >= 65 && c <= 90) && !(c >= 97 && c <= 122) && !(c >= 48 && c <= 57)) symb = true;
+    if (
+      !(c >= 65 && c <= 90) &&
+      !(c >= 97 && c <= 122) &&
+      !(c >= 48 && c <= 57)
+    )
+      symb = true;
   });
   return num && lwr && upr && symb;
 }
 
-//validasi email
+//5. validasi email
 function validEmail(str) {
   let at = str.indexOf("@");
   let dot = str.lastIndexOf(".");
@@ -73,19 +78,19 @@ function validEmail(str) {
   }
 }
 
-//validasi gender
+//6. validasi gender
 function validGender(str) {
   return str === "male" || str === "female";
 }
 
-//validasi input lebih dari satu kata
+//7. validasi input lebih dari satu kata
 function twoWords(str) {
   return str.trim().split(" ").length > 1;
 }
 
 const handleFormevent = (event) => {
   event.preventDefault();
-  valid=1;
+  valid = 1;
   const fName = document.getElementById("inputN");
   const lName = document.getElementById("inputL");
   const addr = document.getElementById("address");
@@ -99,7 +104,7 @@ const handleFormevent = (event) => {
   } else if (!validFirstLetter(fName.value)) {
     valid--;
     errorFname.innerHTML = "First letter must be capital";
-  }else{
+  } else {
     errorFname.innerHTML = "First Name";
   }
 
@@ -109,7 +114,7 @@ const handleFormevent = (event) => {
   } else if (!validFirstLetter(lName.value)) {
     valid--;
     errorLname.innerHTML = "First letter must be capital";
-  }else{
+  } else {
     errorLname.innerHTML = "Last Name";
   }
 
@@ -123,7 +128,7 @@ const handleFormevent = (event) => {
     valid--;
     errorAddress.innerHTML =
       "Address must contain number(s) (for: Block number, road number, etc)";
-  }else{
+  } else {
     errorAddress.innerHTML = "Address";
   }
 
@@ -133,17 +138,18 @@ const handleFormevent = (event) => {
   } else if (!validEmail(email.value)) {
     valid--;
     errorEmail.innerHTML = "Email not valid";
-  }else{
+  } else {
     errorEmail.innerHTML = "Email Address";
   }
 
   if (!notEmpty(passw.value)) {
     valid--;
     errorPassword.innerHTML = "Password musn't be empty";
-  }else if (!validPassword(passw.value)) {
+  } else if (!validPassword(passw.value)) {
     valid--;
-    errorPassword.innerHTML = "Password not Strong Enough";
-  }else{
+    errorPassword.innerHTML =
+      "Password not Strong Enough (Contain at least one uppercase, lowercase, and number)";
+  } else {
     errorPassword.innerHTML = "Password";
   }
 
@@ -153,12 +159,12 @@ const handleFormevent = (event) => {
   } else if (!validGender(gender.value)) {
     valid--;
     errorGender.innerHTML = "Gender not valid";
-  }else{
+  } else {
     errorGender.innerHTML = "Gender";
   }
 
-  if(valid==1){
-    window.location.href="index.html";
+  if (valid == 1) {
+    window.location.href = "index.html";
   }
 };
 regisForm.addEventListener("submit", handleFormevent);
@@ -167,7 +173,6 @@ let can = init("canvas");
 cW = canvas.width = window.innerWidth;
 cH = canvas.height = window.innerHeight;
 
-//FireFly Class Init
 class Firefly {
   constructor() {
     this.x = Math.random() * cW;

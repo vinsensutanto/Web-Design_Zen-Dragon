@@ -1,6 +1,6 @@
 body {
     top: 0;
-    bottom:0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background-image: url('..\\img\\Register-BG.jpg');
@@ -12,7 +12,7 @@ body {
     position: fixed;
 }
 
-.content-wrapper{
+.content-wrapper {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -34,7 +34,6 @@ form * {
 
 form {
     background-color: rgba(48, 47, 65, 0.3);
-    /* max-height: 500px; */
     max-width: 400px;
     height: 75%;
     width: 55%;
@@ -50,9 +49,9 @@ form {
     overflow-y: scroll;
 }
 
-form img{
+form img {
     vertical-align: top;
-    width:60%;
+    width: 60%;
     margin-bottom: 5%;
 }
 
@@ -92,7 +91,7 @@ form p {
     cursor: text;
 }
 
-input:is(:focus,:not(:placeholder-shown))+.placeholder {
+input:is(:focus, :not(:placeholder-shown))+.placeholder {
     background-color: rgb(155, 155, 155, 0.65);
     border: 2px solid rgba(255, 255, 0, 0.3);
     border-radius: 25px;
@@ -114,7 +113,7 @@ input {
     font-weight: 300;
 }
 
-input:is(:focus,:not(:placeholder-shown)) {
+input:is(:focus, :not(:placeholder-shown)) {
     border: 2px solid rgba(255, 255, 0, 0.3);
 }
 
@@ -130,7 +129,7 @@ input:is(:focus,:not(:placeholder-shown)) {
 
 .radio-wrapper .option {
     background: rgba(255, 255, 255, 0.1);
-    color:white;
+    color: white;
     height: 100%;
     width: 100%;
     display: flex;
@@ -172,7 +171,7 @@ input[type="radio"] {
 
 #male:checked:checked~.male,
 #female:checked:checked~.female {
-    border-color: rgb(160, 160, 0,0.5);
+    border-color: rgb(160, 160, 0, 0.5);
     background: rgb(160, 160, 0);
 }
 
@@ -183,22 +182,22 @@ input[type="radio"] {
     transform: scale(1);
 }
 
-form textarea{
-    margin-top:10px;
+form textarea {
+    margin-top: 10px;
     width: 100%;
     height: 60%;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    color:white;
+    color: white;
     background-color: rgba(255, 255, 255, 0.1);
     font-size: 16px;
     resize: none;
 }
 
-form textarea:is(:focus,:not(:placeholder-shown)){
-    border-color: rgb(160, 160, 0,0.5);
+form textarea:is(:focus, :not(:placeholder-shown)) {
+    border-color: rgb(160, 160, 0, 0.5);
 }
 
 textarea::placeholder {
@@ -214,8 +213,7 @@ textarea::placeholder {
 }
 
 .textAreaLabel {
-    /* left: var(--padding); */
-    position:relative;
+    position: relative;
     color: rgba(255, 255, 255, 0.75);
     padding: 0 4px;
     transition: all 0.2s ease-in;
@@ -235,14 +233,14 @@ button {
     transition: all 0.3s ease-out;
 }
 
-button:is(:hover,:active){
+button:is(:hover, :active) {
     transition: all 0.3s ease-in;
     background-color: rgb(200, 200, 0.8);
     box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.5);
     color: rgb(255, 255, 255);
 }
 
-/* Tablet */
+/* Ipad Responsive */
 @media screen and (max-width: 820px) {
     form {
         padding: 3% 5%;
@@ -254,56 +252,76 @@ button:is(:hover,:active){
         line-height: 7vw;
     }
 
-    #inputN,#inputL,#address,#email,#password {
+    #inputN,
+    #inputL,
+    #address,
+    #email,
+    #password {
         font-size: 1.8vw;
     }
-    
+
     p {
-        font-size: 1.8vw!important;
+        font-size: 1.8vw !important;
     }
 }
 
-@media screen and (max-width: 420px){
+/* Phone Responsive */
+@media screen and (max-width: 420px) {
     form {
         padding: 3% 12%;
     }
+
     form h2 {
         margin-top: 5%;
         font-size: 3.5vw;
         line-height: 7vw;
     }
+
     p {
-        font-size: 4vw!important;
+        font-size: 4vw !important;
     }
-    #inputN,#inputL,#address,#email,#password {
+
+    #inputN,
+    #inputL,
+    #address,
+    #email,
+    #password {
         font-size: 3vw;
     }
-    .male, .female{
-        font-size:12px!important;
+
+    .male,
+    .female {
+        font-size: 12px !important;
     }
+
     .input-wrapper {
         --padding: 10px;
-        margin:1rem 0;
+        margin: 1rem 0;
     }
+
     input {
         padding: 0 7%;
         height: 30px;
     }
-    .placeholder{
-        font-size:0.7rem;
+
+    .placeholder {
+        font-size: 0.7rem;
     }
-    input:is(:focus,:not(:placeholder-shown))+.placeholder {
+
+    input:is(:focus, :not(:placeholder-shown))+.placeholder {
         font-size: 10px;
     }
+
     .radio-wrapper .option {
         margin: 0px 5px;
     }
+
     .radio-wrapper .option .dot {
         height: 15px;
         width: 15px;
         margin-right: 5px;
     }
-    
+
     .radio-wrapper .option .dot::before {
         top: 2px;
         left: 2px;
@@ -314,6 +332,7 @@ button:is(:hover,:active){
         transform: scale(1.5);
         transition: all 0.3s ease;
     }
+
     button {
         width: 55%;
         background-color: rgba(220, 220, 0, 0.5);
