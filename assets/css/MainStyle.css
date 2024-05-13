@@ -1,5 +1,3 @@
-/* NAVBAR */
-
 body {
     top: 0;
     bottom: 0;
@@ -131,7 +129,6 @@ nav ul li span:hover {
 }
 
 /* FOOTER */
-
 footer {
     position: relative;
     font-family: "Tenor Sans", sans-serif;
